@@ -481,7 +481,1039 @@ export default function ArtistBlueprint() {
       );
     }
 
-    // Default content for other modules
+    // Newsletter Module
+    if (moduleId === "newsletter") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Building Your Artist Newsletter System</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                🚀 "If Social Media Disappeared Tomorrow, Would You Still Be Able to Reach Your Fans?"
+              </h3>
+              <p className="text-lg text-foreground/80">
+                A newsletter is your most important direct-to-fan tool. It's personal, trackable, and owned by you. This module gives you the playbook for building and running a powerful email + SMS newsletter that converts fans into supporters for life.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">🌐 What This Module Covers</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Why every artist needs an email list",
+                "The psychology of fan retention",
+                "Choosing your newsletter platform",
+                "How to collect emails and phone numbers",
+                "What to send your fans (and how often)",
+                "Automations, welcome flows, and fan journeys",
+                "Tools for advanced segmentation and tracking"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">✅ Step-by-Step: Setting Up Your Newsletter</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-8">
+              
+              {[
+                {
+                  step: "1",
+                  title: "Understand Why You Need a Newsletter",
+                  content: [
+                    "Social media platforms own your followers.",
+                    "Algorithms change — your fan engagement shouldn't.",
+                    "A newsletter gives you ownership over your community.",
+                    "Email & SMS have higher ROI than social media (30-40x ROI when done well)."
+                  ]
+                },
+                {
+                  step: "2",
+                  title: "Choose a Platform",
+                  content: [
+                    "Email Only: ConvertKit, Mailchimp, Flodesk, Beehiiv",
+                    "Email + SMS: Klaviyo, Brevo (Sendinblue), Omnisend, ActiveCampaign",
+                    "Simple & Free to Start: Mailchimp or Brevo"
+                  ]
+                },
+                {
+                  step: "3",
+                  title: "Create a Freebie to Incentivize Signups",
+                  content: [
+                    "A free unreleased song",
+                    "Exclusive demo or acoustic version",
+                    "Behind-the-scenes vlog",
+                    "Early access to tickets or merch"
+                  ]
+                },
+                {
+                  step: "4",
+                  title: "Embed Sign-Up Forms Everywhere",
+                  content: [
+                    "On your website (use a pop-up or embedded form)",
+                    "On Linktree or Hypeddit landing pages",
+                    "In YouTube video descriptions",
+                    "In your Spotify bio (via link)",
+                    "On Instagram stories or pinned posts"
+                  ]
+                },
+                {
+                  step: "5",
+                  title: "Automate the Welcome Series",
+                  content: [
+                    "Email 1: Welcome & deliver freebie",
+                    "Email 2: Your story + what to expect",
+                    "Email 3: Best music video or most streamed song",
+                    "Email 4: Behind-the-scenes vlog or song breakdown",
+                    "Email 5: Invite them to follow on socials & reply to email"
+                  ]
+                },
+                {
+                  step: "6",
+                  title: "Start Sending Weekly Broadcasts",
+                  content: [
+                    "Behind-the-scenes updates",
+                    "New release reminders",
+                    "Ask fans for input (cover art, lyrics, etc.)",
+                    "Merch promotions",
+                    "Tour announcements"
+                  ]
+                }
+              ].map((stepData, index) => (
+                <div key={index} className="space-y-3">
+                  <h4 className="font-semibold text-foreground flex items-center gap-2">
+                    <Badge variant="secondary">{stepData.step}</Badge>
+                    {stepData.title}
+                  </h4>
+                  <ul className="space-y-2 ml-6">
+                    {stepData.content.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-foreground/80">• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">💡 Pro Tips & Tools</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Use Klaviyo or ConvertKit for automation and segmentation.",
+                "Segment fans by interests, actions, or geography.",
+                "Connect with Shopify or Spotify for smart product recommendations.",
+                "Track open rates, click-through rates, and conversions to measure what works."
+              ].map((tip, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{tip}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">📌 Key Takeaways</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Email + SMS marketing gives you control over your fan base.",
+                "Incentives drive signups. Give fans a reason to opt in.",
+                "Automations allow you to nurture fans even while you sleep.",
+                "Newsletters create long-term fan relationships that support merch, tickets, and releases."
+              ].map((takeaway, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{takeaway}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Short-form Content Module
+    if (moduleId === "content") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Shortform Content Strategy for Artists</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg text-foreground/80">
+                Shortform video content is the most powerful organic marketing tool for independent artists in 2025. With platforms like TikTok, Instagram Reels, and YouTube Shorts, it's possible to reach thousands — even millions — without spending a dime. This module gives you the blueprint to start creating consistently, generate engagement, and convert attention into real fans.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">1. Why Shortform Content Matters</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Algorithm Boost: Platforms prioritize shortform videos and push them to new audiences.",
+                "Music Discovery: TikTok is now the #1 platform for discovering new music.",
+                "Fan Conversion: The right content can turn a scroll into a follow, a stream, and eventually a fan."
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">2. Types of Shortform Content That Works for Artists</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {[
+                {
+                  title: "Hook-Based Performances",
+                  description: "Sing the most emotional line of your song. Film a dramatic moment that grabs attention in 1 second."
+                },
+                {
+                  title: "Behind the Scenes",
+                  description: "Studio sessions, writing process, day in the life of an artist."
+                },
+                {
+                  title: "Relatable Skits or POVs",
+                  description: "Use your lyrics to tell a story visually."
+                },
+                {
+                  title: "Trends with a Twist",
+                  description: "Jump on trending sounds, but relate them to your own song."
+                },
+                {
+                  title: "Reaction Style",
+                  description: "Film your friends reacting to your song. Ask strangers to give their first impression."
+                },
+                {
+                  title: "Live Performance Clips",
+                  description: "Strip down a performance to guitar or piano. Use dramatic lighting and storytelling."
+                }
+              ].map((type, index) => (
+                <div key={index} className="space-y-2">
+                  <h4 className="font-semibold text-primary">{type.title}</h4>
+                  <p className="text-foreground/80">{type.description}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">4. The Hook Formula (First 3 Seconds)</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-foreground/80">The first 3 seconds decide whether people watch. Try:</p>
+              <div className="grid md:grid-cols-2 gap-3">
+                {[
+                  "\"This song made my mom cry...\"",
+                  "\"This is the most vulnerable thing I've ever written.\"",
+                  "\"You won't believe what this lyric means.\"",
+                  "\"This song was rejected by 3 labels — now it's blowing up.\""
+                ].map((hook, index) => (
+                  <div key={index} className="bg-primary/5 p-3 rounded-lg">
+                    <p className="text-foreground/80 italic">{hook}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">5. Content Calendar (Example Weekly Plan)</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left p-3 text-foreground">Day</th>
+                      <th className="text-left p-3 text-foreground">Content Type</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-foreground/80">
+                    {[
+                      ["Mon", "Hook-based performance"],
+                      ["Tue", "Behind the scenes clip"],
+                      ["Wed", "Skit / POV or storytelling"],
+                      ["Thu", "Trend or duet with a twist"],
+                      ["Fri", "Reaction / comment reply vid"],
+                      ["Sat", "Live performance / teaser"],
+                      ["Sun", "Recap or inspirational moment"]
+                    ].map(([day, content], index) => (
+                      <tr key={index} className="border-b border-border/50">
+                        <td className="p-3 font-medium text-primary">{day}</td>
+                        <td className="p-3">{content}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-foreground/80 mt-4">
+                You don't have to post every day, but consistency is key. Start with 3x a week and scale up.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardContent className="p-6">
+              <p className="text-center text-foreground/80 italic">
+                Shortform content is not just about going viral — it's about building trust, storytelling, and bringing people into your world. Do it consistently, and you'll see your fanbase grow every month.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Shopify Module
+    if (moduleId === "shopify") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Shopify Store + Printful Merch Setup</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg text-foreground/80">
+                Having a merch store not only gives your fans a way to support you directly, but it also creates a real sense of identity and brand around your music. With platforms like Shopify and Printful, you can run a professional merch operation with zero inventory or upfront costs. Here's how to set it up step-by-step.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">1. Why Merch Matters</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Creates new revenue streams outside of streaming",
+                "Turns fans into walking billboards for your brand",
+                "Allows you to express your aesthetic and message visually",
+                "Strengthens community connection",
+                "Provides a product to promote with every release, show, or campaign"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">3. Step-by-Step Store Setup</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-8">
+              
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">A</Badge>
+                  Create Your Shopify Store
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Go to shopify.com and start a free trial</li>
+                  <li className="text-foreground/80">• Choose a clean, artist-friendly template (e.g., Spotlight, Dawn)</li>
+                  <li className="text-foreground/80">• Set your domain (e.g., yourartistname.com)</li>
+                  <li className="text-foreground/80">• Add your branding: logo, colors, and copy</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">B</Badge>
+                  Connect Printful
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Go to printful.com and create an account</li>
+                  <li className="text-foreground/80">• Connect Printful to Shopify via the Shopify App Store</li>
+                  <li className="text-foreground/80">• Set up product templates (e.g., t-shirts, hoodies, hats, stickers)</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">C</Badge>
+                  Add Products
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Upload your designs or create new ones using Printful's editor</li>
+                  <li className="text-foreground/80">• Set retail prices (consider your fanbase's budget and profit margin)</li>
+                  <li className="text-foreground/80">• Write strong product descriptions (ex: "Soft, premium cotton tee with a lyric from [your song]")</li>
+                  <li className="text-foreground/80">• Add mockup images for a professional look</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">8. Long-Term Merch Strategy</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Drop new designs with every release",
+                "Make seasonal/limited edition merch (holiday, tour, etc.)",
+                "Poll your fans for ideas (Instagram stories, email, etc.)",
+                "Run merch giveaways or bundle deals",
+                "Always have something new to promote"
+              ].map((strategy, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{strategy}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardContent className="p-6">
+              <p className="text-center text-foreground/80 italic">
+                Setting up your merch store is one of the smartest moves you can make as an artist. Not only does it generate income, it deepens fan connection and gives your audience something to wear, hold, and represent. With tools like Shopify + Printful, there's no excuse not to launch your store today.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Royalties Module
+    if (moduleId === "royalties") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Royalty Collection & Music Publishing Basics</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Get Paid for Every Play: The Ultimate Guide to Royalties and Publishing
+              </h3>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">What This Module Covers</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "The different types of royalties (performance, mechanical, sync)",
+                "What publishing is and why it matters",
+                "How to collect all the money you're owed",
+                "Which platforms and organizations to register with"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">Step-by-Step Setup</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-8">
+              
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">1</Badge>
+                  Understand the Types of Royalties
+                </h4>
+                <div className="space-y-3 ml-6">
+                  <div>
+                    <span className="font-medium text-primary">Performance Royalties –</span>
+                    <span className="text-foreground/80"> Generated when your music is played publicly (radio, bars, TV, streaming, live shows). Collected by PROs (ASCAP, BMI, SESAC).</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-primary">Mechanical Royalties –</span>
+                    <span className="text-foreground/80"> Generated when your song is streamed, downloaded, or reproduced. Collected in the U.S. by The MLC (Mechanical Licensing Collective).</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-primary">Sync Royalties –</span>
+                    <span className="text-foreground/80"> Generated when your music is used in film, TV, video games, or commercials. You get paid via direct negotiation or your publisher.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">2</Badge>
+                  Register with the Right Organizations
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Sign up for a PRO: Choose ASCAP or BMI (free or low-cost signup). These collect your performance royalties.</li>
+                  <li className="text-foreground/80">• Register with the MLC: Free to join. Collects mechanical streaming royalties from services like Spotify, Apple Music, Amazon, etc.</li>
+                  <li className="text-foreground/80">• Create a Songtrust or CD Baby Pro account (optional but powerful): These collect international royalties and administer your publishing rights more broadly.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">3</Badge>
+                  Register Your Works
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Any time you release a song, register it with your PRO and your publishing admin (like Songtrust or CD Baby Pro).</li>
+                  <li className="text-foreground/80">• Input the ISRC (for the recording) and the splits if co-written.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">4</Badge>
+                  Set Up SoundExchange
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• This collects digital performance royalties from services like Pandora and SiriusXM. Free to sign up. These are separate from your PRO.</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">Key Takeaways</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "There is money on the table you're probably missing.",
+                "Registering for publishing and royalty collection is free or low-cost but sets you up to earn from your entire catalog.",
+                "Owning your publishing = long-term income and licensing opportunities."
+              ].map((takeaway, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{takeaway}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Bonus Module
+    if (moduleId === "bonus") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Bonus Module: Insider Music Industry Secrets</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg text-foreground/80">
+                This bonus section contains everything else you need to know about the music industry to avoid the biggest mistakes and set yourself up for a long-term, profitable career. These are insights and strategies pulled directly from the music business playbook used by top artists, managers, and lawyers — the stuff no one tells you until it's too late.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">1. You Are a Business</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Think like a business from day one. You're not just an artist — you're a company with revenue, branding, expenses, and taxes.",
+                "Keep your business organized. Set up a business bank account, track your income and expenses, and learn basic accounting.",
+                "Your career has a lifespan — plan for the long-term. Invest, save, and avoid unnecessary spending early on."
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">3. Record Deals: The Fine Print</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-3">
+                {[
+                  "Record labels rarely do artist development anymore. You're expected to already have traction.",
+                  "Advances are loans. You don't pay them back, but they are recouped from your royalties.",
+                  "Cross-Collateralization: Labels can recoup losses from one project with profits from another. Avoid it when possible.",
+                  "360 Deals: Labels take a percentage of everything — merch, touring, brand deals. If you sign one, negotiate exclusions.",
+                  "Exclusivity & Re-Recording Clauses: These can lock you down. Always ask for a \"sunset clause\" and reversion terms."
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <p className="text-foreground/80">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-destructive/5 border-destructive/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">8. Avoiding Common Pitfalls</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="space-y-2">
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Don't sign anything without a lawyer.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Don't pay for fake streams or shady playlisting.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Don't ignore your data: your Spotify for Artists and YouTube dashboards tell a story. Use it to guide your next steps.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Don't chase viral hits without a fanbase to catch them.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Continue with remaining modules...
+
+    // Branding Module
+    if (moduleId === "branding") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Brand Building for Artists</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg text-foreground/80">
+                Your brand is more than just your logo or visual identity—it's how people feel when they encounter you and your music. A well-developed brand sets you apart in a saturated market and helps fans connect with your personality, values, and story.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">1. What Is a Brand (for Artists)?</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <ul className="space-y-3">
+                <li className="text-foreground/80">• A brand is the total emotional experience a fan has with you.</li>
+                <li className="text-foreground/80">• It's built through your sound, visuals, messaging, tone of voice, and personal story.</li>
+                <li className="text-foreground/80">• Think of your favorite artists—what emotions or images come to mind when you think of them? That's their brand at work.</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">2. Discovering Your Identity</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-foreground/80">Before building your brand, get clear on:</p>
+              <div className="space-y-3">
+                <div>
+                  <span className="font-medium text-primary">Your Why:</span>
+                  <span className="text-foreground/80"> Why do you make music? What do you want to express?</span>
+                </div>
+                <div>
+                  <span className="font-medium text-primary">Your Story:</span>
+                  <span className="text-foreground/80"> What makes your background and journey unique?</span>
+                </div>
+                <div>
+                  <span className="font-medium text-primary">Your Audience:</span>
+                  <span className="text-foreground/80"> Who are your ideal fans? What do they care about?</span>
+                </div>
+              </div>
+              <div className="bg-primary/10 p-4 rounded-lg mt-4">
+                <p className="text-foreground/80">
+                  <strong>Example:</strong> "I make nostalgic pop music for twenty-somethings navigating love, heartbreak, and self-discovery."
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">3. Visual Identity</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-foreground/80">Once your story and audience are defined, build a consistent visual language:</p>
+              <div className="space-y-3">
+                {[
+                  "Color Palette: 3–5 brand colors used across all content.",
+                  "Typography: 1–2 consistent fonts for visuals and website.",
+                  "Photography Style: Gritty & raw? Dreamy & cinematic? Vintage film?",
+                  "Logo/Wordmark: A recognizable artist name design for merch, streaming profiles, and posters."
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <p className="text-foreground/80">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">7. Examples of Great Artist Brands</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-4">
+                <div>
+                  <span className="font-medium text-primary">Tyler, The Creator:</span>
+                  <span className="text-foreground/80"> Playful yet cinematic aesthetic, alter ego-based storytelling.</span>
+                </div>
+                <div>
+                  <span className="font-medium text-primary">Billie Eilish:</span>
+                  <span className="text-foreground/80"> Dark visuals, whispery vocals, emotionally raw branding.</span>
+                </div>
+                <div>
+                  <span className="font-medium text-primary">Bad Bunny:</span>
+                  <span className="text-foreground/80"> Bold color use, gender-bending fashion, Latino cultural pride.</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">9. Action Steps</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Write a 1–2 sentence brand statement.",
+                "Define your color palette and visual mood board using Pinterest or Canva.",
+                "Create 3 content series that show different sides of your personality (e.g., studio sessions, stories from your life, fan Q&As).",
+                "Update your bios, link in bio, and visuals to reflect your brand.",
+                "Stick to your brand for 60–90 days and track how people respond."
+              ].map((step, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{step}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardContent className="p-6">
+              <p className="text-center text-foreground/80 italic">
+                Remember: A brand isn't built overnight. It's about clarity, consistency, and connection over time.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Playlisting Module
+    if (moduleId === "playlisting") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Playlisting & Pitching for Artists</h2>
+          </div>
+          
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg text-foreground/80">
+                Getting your music onto Spotify playlists and other streaming platforms is one of the most powerful ways to build momentum, gain monthly listeners, and reach new fans. This module will break down how playlisting works, how to approach playlist curators, and how to run your own campaigns.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">1. Understanding Playlisting</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-foreground/80">There are three primary types of playlists:</p>
+              <div className="space-y-4">
+                <div>
+                  <span className="font-medium text-primary">Editorial Playlists –</span>
+                  <span className="text-foreground/80"> Created by Spotify's in-house editorial team (e.g., RapCaviar, Fresh Finds). Harder to access, but extremely powerful.</span>
+                </div>
+                <div>
+                  <span className="font-medium text-primary">Algorithmic Playlists –</span>
+                  <span className="text-foreground/80"> Auto-generated by Spotify's AI (e.g., Release Radar, Discover Weekly). These are triggered by data: saves, skips, shares, and engagement.</span>
+                </div>
+                <div>
+                  <span className="font-medium text-primary">User-Curated Playlists –</span>
+                  <span className="text-foreground/80"> Made by independent curators or companies. These are the most accessible and can still deliver great results.</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">3. How to Pitch Your Song</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground">A. Spotify Editorial Pitch (via Spotify for Artists)</h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Log into Spotify for Artists</li>
+                  <li className="text-foreground/80">• Navigate to your upcoming release and click "Pitch a Song"</li>
+                  <li className="text-foreground/80">• Fill out every field with accuracy</li>
+                  <li className="text-foreground/80">• Select the best fitting genre and subgenres</li>
+                  <li className="text-foreground/80">• Write a clear, compelling pitch (100–300 words max)</li>
+                  <li className="text-foreground/80">• Submit at least 7 days before your release date</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground">B. SubmitHub & Groover</h4>
+                <p className="text-foreground/80">These platforms allow you to submit music to independent curators, influencers, blogs, and YouTubers.</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-primary/5 p-4 rounded-lg">
+                    <h5 className="font-medium text-foreground mb-2">SubmitHub</h5>
+                    <ul className="text-sm text-foreground/80 space-y-1">
+                      <li>• Free and paid credits</li>
+                      <li>• Target niche curators</li>
+                      <li>• Track response rates and feedback</li>
+                    </ul>
+                  </div>
+                  <div className="bg-primary/5 p-4 rounded-lg">
+                    <h5 className="font-medium text-foreground mb-2">Groover</h5>
+                    <ul className="text-sm text-foreground/80 space-y-1">
+                      <li>• Pay to submit to influencers, playlist curators, and professionals</li>
+                      <li>• Many curators provide feedback or placement in exchange</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground">C. Manual Outreach</h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Search Spotify for playlists in your genre (e.g., "lo-fi beats," "indie pop gems")</li>
+                  <li className="text-foreground/80">• Use tools like Chartmetric or PlaylistSupply to find curator contact info</li>
+                  <li className="text-foreground/80">• Reach out with a short, professional email or DM</li>
+                </ul>
+                
+                <div className="bg-muted/20 p-4 rounded-lg">
+                  <h5 className="font-medium text-foreground mb-2">Sample Email:</h5>
+                  <div className="text-sm text-foreground/80 space-y-2">
+                    <p><strong>Subject:</strong> Playlist Submission – [Your Song Title] by [Artist Name]</p>
+                    <div className="space-y-2">
+                      <p>Hey [Curator Name],</p>
+                      <p>I just released a track I think would be a great fit for your playlist [Playlist Name]. It blends [genre] with [mood], and I'd love for you to check it out.</p>
+                      <p>Link: [Spotify song link]</p>
+                      <p>Thanks for listening and keep up the amazing work!</p>
+                      <p>– [Your Name / Artist Name]</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-destructive/5 border-destructive/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">4. Avoiding Playlisting Scams</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-foreground/80">Be wary of services that:</p>
+              <div className="space-y-2">
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Guarantee editorial placement</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Offer "bot" plays or fake listeners</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-destructive text-xl">❌</span>
+                  <p className="text-foreground/80">Don't show you the playlist you'll be added to</p>
+                </div>
+              </div>
+              <p className="text-primary font-medium">
+                Stick with legitimate platforms like SubmitHub, Groover, or curated services with proven track records.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Continue with remaining modules...
     return (
       <div className="space-y-8 animate-fade-in-up">
         <div className="text-center space-y-4">
