@@ -101,6 +101,294 @@ export default function ArtistBlueprint() {
 
     const Icon = module.icon;
 
+    // Facebook Ads specific content
+    if (moduleId === "facebook-ads") {
+      return (
+        <div className="space-y-8 animate-fade-in-up">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="p-4 rounded-full bg-gradient-card border border-border">
+                <Icon className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Run Facebook Ads to Grow Your Spotify</h2>
+          </div>
+          
+          {/* Hero Section */}
+          <Card className="bg-gradient-cta/10 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                🚀 The $5/Day Hack to Getting 1,000+ Real Listeners on Spotify
+              </h3>
+              <p className="text-lg text-foreground/80">
+                Finally crack the code to getting streams without begging for playlist placements.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* What This Module Covers */}
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground flex items-center gap-2">
+                🧠 What This Module Covers
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "How Facebook Ads can drive real listeners to your Spotify",
+                "The exact ad structure we use to go from 0 to 10,000 monthly listeners in 30 days",
+                "How to create 10–15 scroll-stopping creatives using just your phone",
+                "How to track conversions properly using Hypeddit or Feature.fm",
+                "How to set up Meta Ads Manager step-by-step",
+                "How to avoid wasting money like most \"promo guys\" do"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Facebook Ads 101 */}
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">📚 Facebook Ads 101: Understanding the Basics</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">What are Facebook Ads?</h4>
+                <p className="text-foreground/80 mb-3">
+                  Facebook Ads (now under "Meta Ads") are paid promotions that show your content to people on Instagram, Facebook, and Messenger. You can target users based on their interests, behaviors, age, location, and more.
+                </p>
+                <p className="text-primary font-medium">
+                  Why it matters: You're not depending on playlists or hoping your TikTok blows up. You're paying to get your music in front of the right people — and you're in control.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Terms to Know:</h4>
+                <div className="space-y-2">
+                  <div className="flex gap-3">
+                    <span className="font-medium text-primary">Campaign –</span>
+                    <span className="text-foreground/80">Your main ad goal (e.g., traffic, engagement)</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="font-medium text-primary">Ad Set –</span>
+                    <span className="text-foreground/80">The audience, budget, and placement settings</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="font-medium text-primary">Ad –</span>
+                    <span className="text-foreground/80">The creative people will actually see</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Step-by-Step Setup */}
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">🛠 Step-by-Step Setup</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-8">
+              
+              {/* Step 1 */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">1</Badge>
+                  Create Your Meta Business Account
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Visit business.facebook.com</li>
+                  <li className="text-foreground/80">• Create or log in to your business account</li>
+                  <li className="text-foreground/80">• Set up your Business Manager</li>
+                  <li className="text-foreground/80">• Connect your Instagram account, Facebook page, and Ad Account</li>
+                </ul>
+              </div>
+
+              {/* Step 2 */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">2</Badge>
+                  Pick the Right Song
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Choose a track that's new (within the last 30–60 days) or has the strongest emotional hook</li>
+                  <li className="text-foreground/80">• Make sure your song has good production and cover art (yes, visuals matter)</li>
+                </ul>
+              </div>
+
+              {/* Step 3 */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">3</Badge>
+                  Build a Smart Link (Conversion Tracking)
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Use Hypeddit or Feature.fm to create a Smart Link</li>
+                  <li className="text-foreground/80">• This link will be used as your ad's destination so you can track click performance</li>
+                </ul>
+              </div>
+
+              {/* Step 4 */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">4</Badge>
+                  Create Your Campaign in Meta Ads Manager
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Go to Meta Ads Manager</li>
+                  <li className="text-foreground/80">• Click Create Campaign</li>
+                  <li className="text-foreground/80">• Objective: Select Traffic or Conversions</li>
+                  <li className="text-foreground/80">• Campaign Name: Use something like "[Song Title] Spotify Push - June"</li>
+                </ul>
+              </div>
+
+              {/* Step 5 */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">5</Badge>
+                  Ad Set Targeting
+                </h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Daily Budget: Start with $5–10/day</li>
+                  <li className="text-foreground/80">• Locations: U.S., Canada, UK, Australia (add Germany or Netherlands for international if needed)</li>
+                  <li className="text-foreground/80">• Age: 18–34 (sweet spot for music discovery)</li>
+                  <li className="text-foreground/80">• Interests: Spotify, Apple Music, Rap Caviar, Lyrical Lemonade, specific artists</li>
+                  <li className="text-foreground/80">• Placements: Manual → ONLY Instagram Feed + Instagram Stories (turn off everything else)</li>
+                </ul>
+              </div>
+
+              {/* Step 6 */}
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground flex items-center gap-2">
+                  <Badge variant="secondary">6</Badge>
+                  Make Your Ad
+                </h4>
+                <p className="text-foreground/80 ml-6">Upload video content — videos perform much better than images.</p>
+                
+                <div className="ml-6">
+                  <h5 className="font-medium text-foreground mb-3">Creative Ideas:</h5>
+                  <ul className="space-y-2">
+                    <li className="text-foreground/80">• Talking-to-camera: "If you like Drake or Brent Faiyaz, this might be for you…"</li>
+                    <li className="text-foreground/80">• Behind-the-scenes studio content</li>
+                    <li className="text-foreground/80">• Emotional lyric videos</li>
+                    <li className="text-foreground/80">• Fan reaction clips</li>
+                    <li className="text-foreground/80">• Music video snippets</li>
+                  </ul>
+                </div>
+
+                <div className="ml-6">
+                  <h5 className="font-medium text-foreground mb-3">Tips:</h5>
+                  <ul className="space-y-2">
+                    <li className="text-foreground/80">• Add captions (use CapCut or Captions app)</li>
+                    <li className="text-foreground/80">• Keep it under 15 seconds</li>
+                    <li className="text-foreground/80">• Hook them in the first 3 seconds</li>
+                    <li className="text-foreground/80">• End with a call-to-action: "Stream it now."</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Common Mistakes */}
+          <Card className="bg-destructive/5 border-destructive/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">💡 Common Mistakes to Avoid</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex items-start gap-3">
+                <span className="text-destructive text-xl">❌</span>
+                <p className="text-foreground/80">Boosting posts from Instagram (use Meta Ads Manager instead)</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-destructive text-xl">❌</span>
+                <p className="text-foreground/80">Only testing 1 ad — you need 10–15 creatives to find what works</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-destructive text-xl">❌</span>
+                <p className="text-foreground/80">Sending users straight to Spotify (use a Smart Link to track)</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Optimization Checklist */}
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">📊 After Launching: Optimization Checklist</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Wait 3 full days before touching anything",
+                "Turn off ads with high CPC ($1+ per click)",
+                "Scale ads with low CPC and good click-through rates",
+                "Always test new creatives weekly"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Resources */}
+          <Card className="bg-primary/5 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">🗖 Resource Downloads</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Ad Setup PDF Checklist",
+                "Editable CapCut Template",
+                "10 Proven Ad Hooks for Music",
+                "Smart Link Setup Guide",
+                "Top 20 Targeting Interests List"
+              ].map((resource, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span className="text-foreground/80">{resource}</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Final Words */}
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">📌 Final Words</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-foreground/80 leading-relaxed">
+                This is the foundation of music marketing in 2025. Artists who understand how to use paid traffic build momentum, gather data, and eventually scale to full-time income.
+              </p>
+              <p className="text-primary font-medium">
+                Your Spotify doesn't grow without traffic. Let's drive it ourselves.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* CTA */}
+          <Card className="bg-primary/10 border-primary/20">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-semibold text-foreground mb-3">
+                Want help setting this up professionally?
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Book a free call with our team at Label Ready and we'll build this with you.
+              </p>
+              <Button variant="cta-outline" size="lg">
+                Book a Free Call
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Default content for other modules
     return (
       <div className="space-y-8 animate-fade-in-up">
         <div className="text-center space-y-4">
