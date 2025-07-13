@@ -409,7 +409,7 @@ export default function ArtistBlueprint() {
       );
     }
 
-    // EPK Module (continuing with detailed content)
+    // EPK Module (complete detailed content)
     if (moduleId === "epk") {
       return (
         <div className="space-y-8 animate-fade-in-up">
@@ -460,6 +460,172 @@ export default function ArtistBlueprint() {
               <p className="text-primary font-medium">
                 Think of it like your LinkedIn, resume, and demo reel — but for your artist career.
               </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">Sections Your EPK Should Include</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {[
+                {
+                  title: "Artist Bio",
+                  description: "A compelling and concise story of who you are, where you're from, and why your music matters. Aim for a short version (75 words) and a long version (150–200 words)."
+                },
+                {
+                  title: "Press Photos", 
+                  description: "High-resolution, professional-looking images (ideally vertical and horizontal versions). Include live performance shots, portraits, and any promotional photography."
+                },
+                {
+                  title: "Music Links",
+                  description: "Spotify, Apple Music, SoundCloud, Bandcamp — only include your best and most recent music. Embed YouTube videos for extra engagement."
+                },
+                {
+                  title: "Performance Footage / Music Videos",
+                  description: "Link to your strongest live footage and music videos (hosted on YouTube/Vimeo)"
+                },
+                {
+                  title: "Press Quotes / Reviews",
+                  description: "Any write-ups, blog mentions, or quotes from tastemakers"
+                },
+                {
+                  title: "Social Media & Stats",
+                  description: "Instagram, TikTok, YouTube, Spotify follower/stream counts (if they're impressive). Milestones like playlist placements or virality moments."
+                },
+                {
+                  title: "Contact Info",
+                  description: "Manager email, booking contact, or your own email"
+                },
+                {
+                  title: "Downloadable Assets",
+                  description: "A zipped folder of photos, logos, and music files if sending to press/booking"
+                }
+              ].map((section, index) => (
+                <div key={index} className="space-y-2">
+                  <h4 className="font-semibold text-primary">{section.title}</h4>
+                  <p className="text-foreground/80">{section.description}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">How to Make an EPK (Tools + Tips)</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-3">
+                {[
+                  "Use free tools like Canva, Notion, or Google Sites to design your own beautiful EPK.",
+                  "Or, use platforms like Bandzoogle, Sonicbids, or SubmitHub Press Kits.",
+                  "Keep it mobile-friendly and no more than 2–3 scrolls long on desktop."
+                ].map((tip, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <p className="text-foreground/80">{tip}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-6">
+                <h4 className="font-semibold text-foreground mb-3">Design Best Practices:</h4>
+                <ul className="space-y-2 ml-6">
+                  <li className="text-foreground/80">• Choose fonts and colors that match your artist brand</li>
+                  <li className="text-foreground/80">• Keep it visually clean and skimmable</li>
+                  <li className="text-foreground/80">• Use headlines, bold text, and icons to guide the eye</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">How to Use Your EPK</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {[
+                {
+                  title: "Press Pitches",
+                  description: "Include it in outreach to blogs, YouTube reviewers, playlist curators, and magazines"
+                },
+                {
+                  title: "Booking Agents",
+                  description: "Show you're professional and ready for bigger stages"
+                },
+                {
+                  title: "Brand Sponsorships",
+                  description: "Help brands understand your audience and aesthetic"
+                },
+                {
+                  title: "Team Building",
+                  description: "Send to managers, publicists, or producers who want to learn more"
+                }
+              ].map((use, index) => (
+                <div key={index} className="flex gap-3">
+                  <span className="font-medium text-primary">{use.title} –</span>
+                  <span className="text-foreground/80">{use.description}</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">Pro Tips</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Update your EPK every 2–3 months",
+                "Track which links are being clicked (use Bit.ly or Linktree analytics)",
+                "Don't overload it — curate quality over quantity"
+              ].map((tip, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-foreground/80">{tip}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-primary/5 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">Bonus Resource Downloads</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {[
+                "Free Canva EPK Template",
+                "List of 10+ Example EPKs from Independent Artists",
+                "EPK Audit Checklist"
+              ].map((resource, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span className="text-foreground/80">{resource}</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-card border-border shadow-card">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">Key Takeaways</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-3">
+                {[
+                  "Every serious artist needs an EPK to be taken seriously by the industry.",
+                  "You don't need a label or a big budget to create one.",
+                  "When done right, it opens doors you didn't even know were closed."
+                ].map((takeaway, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <p className="text-foreground/80">{takeaway}</p>
+                  </div>
+                ))}
+              </div>
+              <blockquote className="border-l-4 border-primary pl-4 italic text-foreground/80 mt-6">
+                "You are your own PR team until the world decides otherwise. Show up like a professional before anyone asks you to."
+              </blockquote>
             </CardContent>
           </Card>
 
